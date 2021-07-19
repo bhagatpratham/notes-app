@@ -22,9 +22,9 @@ const addNotes = (title, body) => {
     });
     // saving notes
     saveNotes(notes);
-    console.log("Note saved!");
+    console.log(chalk.green.inverse("Note saved!"));
   } else {
-    console.log("Note title taken!");
+    console.log(chalk.red.inverse("Note title taken!"));
   }
 };
 
@@ -58,8 +58,19 @@ const removeNotes = (title) => {
   }
 };
 
+const listNotes = () => {
+  const notes = loadNotes();
+
+  console.log(chalk.blue.inverse("Notes: "));
+
+  notes.forEach((note) => {
+    return console.log(note.title);
+  });
+};
+
 module.exports = {
   getNotes: getNotes,
   addNotes: addNotes,
   removeNotes: removeNotes,
+  listNotes: listNotes,
 };
