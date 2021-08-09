@@ -4,10 +4,10 @@ Manage notes in a single JSON file
 
 ### Features
 
-Create note
-Remove note
-List notes
-Read note
+1. Create note
+2. Remove note
+3. List notes
+4. Read note
 
 ### Get Started
 
